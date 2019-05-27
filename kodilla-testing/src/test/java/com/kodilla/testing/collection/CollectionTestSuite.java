@@ -5,6 +5,8 @@ import org.junit.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static com.kodilla.testing.collection.OddNumbersExterminator.exterminate;
+
 public class CollectionTestSuite {
     @Before
     public void before() {
@@ -36,23 +38,21 @@ public class CollectionTestSuite {
         numbers.add(8);
         numbers.add(9);
         //When
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        oddNumbersExterminator.exterminate(numbers);
-        System.out.println("Testing " + oddNumbersExterminator.even);
+        ArrayList<Integer> even = exterminate(numbers);
+        System.out.println("Testing " + even);
         //Then
-        Assert.assertEquals(Arrays.asList(2,4,6,8), oddNumbersExterminator.even);
+        Assert.assertEquals(Arrays.asList(2,4,6,8), even);
     }
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         //Given
         ArrayList<Integer> numbers = new ArrayList<Integer>();
         //When
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        oddNumbersExterminator.exterminate(numbers);
-        System.out.println("Testing " + oddNumbersExterminator.even);
+        ArrayList<Integer> even = exterminate(numbers);
+        System.out.println("Testing " + even);
         System.out.println("The list 'numbers' is empty");
         //Then
-        Assert.assertEquals(numbers.size(),oddNumbersExterminator.even.size());
+        Assert.assertEquals(numbers.size(),even.size());
     }
 
 }
