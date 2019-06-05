@@ -7,6 +7,7 @@ import com.kodilla.stream.com.kodilla.stream.forumuser.ForumUser;
 import com.kodilla.stream.person.People;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -19,7 +20,7 @@ public class StreamMain {
 
         Map<Integer, ForumUser> theResultMapOfForumUser = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getSex()=='M')
-                .filter(forumUser -> LocalDate.now().compareTo(forumUser.getBirthDate()) > 20)
+                .filter(forumUser -> ChronoUnit.DAYS.between(forumUser.getBirthDate(),LocalDate.now()) > 7300)
                 .filter(forumUser -> forumUser.getNumberOfPosts() >= 1)
                 .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
 
