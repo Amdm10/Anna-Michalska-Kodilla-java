@@ -31,7 +31,7 @@ public final class Country {
         return quantity;
     }
 
-    public String getCountry() {
+    public String getCountryName() {
         return country;
     }
 

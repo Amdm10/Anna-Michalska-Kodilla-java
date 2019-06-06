@@ -12,7 +12,7 @@ public final class Continent {
     }
 
 
-    public void addCountries(Country country) {
+    public void addCountrie(Country country) {
         countries.add(country);
     }
 

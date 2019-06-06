@@ -14,19 +14,19 @@ public class WorldTestSuite {
         Continent africa = new Continent("Africa");
         Continent northamerica = new Continent("North America");
         Continent asia = new Continent("Asia");
-        world.addContinents(europe);
-        world.addContinents(africa);
-        world.addContinents(northamerica);
-        world.addContinents(asia);
-        europe.addCountries(new Country("Poland",new BigDecimal("38476269")));
-        europe.addCountries(new Country("Germany",new BigDecimal("80594017")));
-        africa.addCountries(new Country("Morocco",new BigDecimal("33986655")));
-        africa.addCountries(new Country("Sudan",new BigDecimal("37345935")));
-        northamerica.addCountries(new Country("USA", new BigDecimal("326625791")));
-        northamerica.addCountries(new Country("Canada", new BigDecimal("35623680")));
-        asia.addCountries(new Country("India", new BigDecimal("1281935911")));
-        asia.addCountries(new Country("Thailand", new BigDecimal("68414135")));
-        asia.addCountries(new Country("Cambodia", new BigDecimal("16204486")));
+        world.addContinent(europe);
+        world.addContinent(africa);
+        world.addContinent(northamerica);
+        world.addContinent(asia);
+        europe.addCountrie(new Country("Poland",new BigDecimal("38476269")));
+        europe.addCountrie(new Country("Germany",new BigDecimal("80594017")));
+        africa.addCountrie(new Country("Morocco",new BigDecimal("33986655")));
+        africa.addCountrie(new Country("Sudan",new BigDecimal("37345935")));
+        northamerica.addCountrie(new Country("USA", new BigDecimal("326625791")));
+        northamerica.addCountrie(new Country("Canada", new BigDecimal("35623680")));
+        asia.addCountrie(new Country("India", new BigDecimal("1281935911")));
+        asia.addCountrie(new Country("Thailand", new BigDecimal("68414135")));
+        asia.addCountrie(new Country("Cambodia", new BigDecimal("16204486")));
         //When
         BigDecimal result = world.getPeopleQuantity();
         //Then
